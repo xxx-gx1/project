@@ -1,0 +1,138 @@
+.container {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding-bottom: 60px; /* 底部留出tabbar空间 */
+}
+
+/* 搜索栏样式 */
+.searchContainer {
+  padding: 15px 16px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.searchBar {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  color: #999;
+  margin-right: 8px;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 瀑布流样式 */
+.storiesContainer {
+  padding: 15px 16px 0;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.waterfall {
+  column-count: 2;
+  column-gap: 15px;
+}
+
+.storyCard {
+  break-inside: avoid;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  height: 100%; /* 确保卡片高度充满容器 */
+  display: flex;
+  flex-direction: column;
+}
+
+.storyCard:hover {
+  transform: translateY(-3px);
+}
+
+.storyImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.storyContent {
+  padding: 12px;
+  flex: 1; /* 让内容区域自动填充剩余空间 */
+  display: flex;
+  flex-direction: column;
+}
+
+.storyTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 5px 0;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.storyDesc {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 8px 0;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.storyMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: auto; /* 元信息推至底部 */
+}
+
+.durationIcon {
+  margin-right: 4px;
+}
+
+/* 加载更多 */
+.loadMore {
+  text-align: center;
+  padding: 20px;
+}
+
+.loadMoreButton {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.loadMoreButton:hover {
+  background-color: #f5f5f5;
+}

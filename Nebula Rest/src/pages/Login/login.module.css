@@ -1,0 +1,115 @@
+/* 登录页面容器 */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 20px;
+  font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* 标题样式 */
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* 登录卡片 */
+.loginCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 表单样式 */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 标签样式 */
+.label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* 输入框样式 */
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #64b5f6;
+  box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.3);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 按钮样式 */
+.button {
+  background: linear-gradient(135deg, #64b5f6, #2196f3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #42a5f5, #1976d2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* 错误信息样式 */
+.errorMessage {
+  color: #ff4d4f;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 10px;
+  background: rgba(255, 77, 79, 0.1);
+  border-radius: 6px;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .loginCard {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

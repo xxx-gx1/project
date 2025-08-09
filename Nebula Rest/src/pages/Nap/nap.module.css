@@ -1,0 +1,229 @@
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  transition: background 0.5s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.backButton,
+.settingsButton {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.modeSelector {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  overflow-x: auto;
+}
+
+.modeButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.activeMode {
+  background: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.backgroundImage {
+  display: none; /* 不再需要固定背景图 */
+}
+
+.timerDisplay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.timeNumbers {
+  font-size: 120px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.timeLabel {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.wakeUpTime {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: absolute;
+  bottom: 180px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.controlButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.mainButton {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.playIcon {
+  color: #4A6FFF;
+}
+
+.pauseIcon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.pauseIcon::before,
+.pauseIcon::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 24px;
+  background: #4A6FFF;
+  border-radius: 2px;
+}
+
+.pauseIcon::after {
+  left: 16px;
+}
+
+.statusText {
+  position: absolute;
+  bottom: 140px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 14px;
+  z-index: 10;
+}
+.customTimeInput {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 10;
+}
+.timeAdjustButton {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.customTimeValue {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  width: 40px;
+  text-align: center;
+}
+
+.customTimeControl {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 10;
+}
+
+.customTimeControl button {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.customTimeControl span {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  width: 40px;
+  text-align: center;
+}
+
+/* 修复唤醒时间文字颜色 */
+.wakeUpTime {
+  color: rgb(0, 0, 0);
+  opacity: 0.9;
+}

@@ -1,0 +1,89 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+.pickerContainer {
+  background-color: white;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cancelButton, .confirmButton {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  color: #666;
+}
+
+.confirmButton {
+  color: #64b5f6;
+  font-weight: 500;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.pickerContent {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  gap: 10px;
+}
+
+.column {
+  width: 80px;
+  overflow-y: auto;
+  text-align: center;
+  scroll-snap-type: y mandatory;
+}
+
+.column > div {
+  padding: 10px 0;
+  scroll-snap-align: center;
+}
+
+.active {
+  color: #64b5f6;
+  font-weight: 500;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+}
+
+/* 隐藏滚动条但保留滚动功能 */
+.column::-webkit-scrollbar {
+  display: none;
+}
+.column {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

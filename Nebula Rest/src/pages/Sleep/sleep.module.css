@@ -1,0 +1,163 @@
+.container {
+  max-height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 顶部标题区域 */
+.header {
+  padding: 40px 20px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.decorIcon {
+  position: absolute;
+  top: 45px;
+  right: 25px;
+  color: #ff9500;
+}
+
+/* 主视觉区域 */
+.heroSection {
+  position: relative;
+  height: 1100px;
+  margin-top: 20px;
+}
+
+
+.promptCard {
+  position: absolute;
+  top: 750px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.promptText {
+  font-size: 13px;
+  color: #333;
+}
+
+.decorButton {
+  background-color: #ff9500;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* 主要功能按钮 */
+.mainButton {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 15px 20px;
+  width: 85%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.mainButtonIcon {
+  color: #64b5f6;
+}
+
+.mainButtonText {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.mainButtonSubtext {
+  font-size: 12px;
+  color: #999;
+}
+
+/* 功能按钮区域 */
+.features {
+  display: flex;
+  position: absolute;
+  top: 1020px;
+  justify-content: space-around;
+  padding: 20px 150px 20px;
+  gap: 10px;
+  z-index: 2;
+}
+
+.featureButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-right: 70px;
+  padding-left: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.featureIconBg {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #f0f7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureIcon {
+  font-size: 20px;
+}
+
+.featureSvgIcon {
+  color: #64b5f6;
+}
+
+.featureText {
+  font-size: 13px;
+  color: #333;
+}
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://ts4.tc.mm.bing.net/th/id/OIP-C.cyo_yJw6j2-vUkGKLLagTQHaCw?r=0&rs=1&pid=ImgDetMain&o=7&rm=3');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* border-radius: 20px 20px 0 0; */
+  z-index: 1;
+}

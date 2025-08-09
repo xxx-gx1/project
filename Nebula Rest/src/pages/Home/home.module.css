@@ -1,0 +1,191 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f5f7fa, #e4eaf2);
+  padding: 20px 16px;
+  font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.header p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.player {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.moonIconContainer {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #e0f7fa, #b3e5fc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.moonIcon {
+  font-size: 100px;
+  color: #fff;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.playerTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.playerSubtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 20px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.controlButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f5ff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.controlButton:hover {
+  background: #e0ebff;
+}
+
+.playButton {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #64b5f6, #2196f3);
+  color: white;
+  font-size: 16px;
+}
+
+.playButton:hover {
+  background: linear-gradient(135deg, #42a5f5, #1976d2);
+  transform: scale(1.05);
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(90deg, #64b5f6, #2196f3);
+  border-radius: 2px;
+}
+
+.timeInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #999;
+}
+
+.recommendationTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.recommendationList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.recommendationItem {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.recommendationItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.recommendationImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.recommendationContent {
+  padding: 12px;
+}
+
+.recommendationItemTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.recommendationItemDuration {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
