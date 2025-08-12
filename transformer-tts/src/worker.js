@@ -5,6 +5,10 @@ import {
     SpeechT5ForTextToSpeech, // 文本 -> 语音 模型 语音的特征
     SpeechT5HifiGan // 语音合成模型 和音色合成
 } from '@xenova/transformers'
+import {
+    encodeWAV
+} from './utils.js'
+
 // huggingFace 开源的大模型社区
 // 禁用本地大模型，去请求远程的 tts模型
 env.allowLocalModels = false
@@ -84,8 +88,9 @@ class MyTextToSpeechPipeline {
             'float32',
             new Float32Array(await (await fetch(speaker_embeddings_url)).arrayBuffer()),
             [1,512] // 维度
-
         )
+        return speaker_embeddings;
+
     }
 }
 
@@ -122,14 +127,14 @@ self.onmessage = async (e) => {
         speaker_embeddings_cache.set(e.data.speaker_id, speaker_embeddings)
     }
     // console.log(speaker_embeddings_cache)
-    const { waveForm } = await model.generate_speech(
+    const { waveform } = await model.generate_speech(
         input_ids, // 分词数组
         speaker_embeddings, // 512 纬的向量
         { vocoder } // 合成器
     );
-    // console.log(waveForm)
+    // console.log(waveform)
     // 声音的blob 文件
-    const wav = encodeWAV(waveForm.data)
+    const wav = encodeWAV(waveform.data)
     console.log(wav,'????')
     self.postMessage({
         status:'complete',
